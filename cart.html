@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Note - Cart</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="product_promo.css">
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <div id="header">
+        <p>The Annual Spring Sale is here! Free US shipping over $98+</p>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-home-link">GHOST NOTE</a>
+            <button class="close-button" onclick="closeSidebar()">X</button>
+        </div>
+        <ul id="categoryContainer"> </ul>
+    </div>
+
+    
+    <div id="main">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <a href="index.html" class="home-link">GHOST NOTE</a>
+        <a href="cart.html" class="cart-link"><img src="shopping-cart.png" alt="Cart"></a>
+        
+        <div id="main">
+            <!-- Sidebar, header, and other elements -->
+            <div id="summary">
+                <div id="cart-items" class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                </div>
+                <div id="subtotal">Subtotal: $0.00</div>
+                <div id="tax">Tax (13%): $0.00</div>
+                <div id="total">Total: $0.00</div>
+                <button id="clear-cart-button" onclick="clearCart()">Clear Cart</button>
+                <button id="checkout-button" onclick="checkout()">CHECKOUT</button>
+            </div>
+        </div>
+        
+        
+        <div id="categoryList"> </div>
+    </div>
+    <div id="footer">
+        <div id="emailform">
+            <h1>Creativity Unlocked</h1>
+            <p>Fuel your creative potential</p>
+            <p> becoming a part of our community and </p>
+            <p>enjoy savings on your first purchase</p>
+            <br>
+            <br>
+            <form action="/subscribe" method="post">
+                <div class="email-form-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">➔</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class="footer-content">
+            <p>© 2024 Ghost Note. All rights reserved.</p>
+            <img src="visa.jpg" alt="Your Image Description" class="footer-image" />
+        </div>
+    </div>
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+

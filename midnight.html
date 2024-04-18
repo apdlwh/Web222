@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Note - Midnight</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="categories.css">
+</head>
+<body>
+    <div id="header">
+        <p>The Annual Spring Sale is here! Free US shipping over $98+</p>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-home-link">GHOST NOTE</a>
+            <button class="close-button" onclick="closeSidebar()">X</button>
+        </div>
+        <ul id="categoryContainer"> </ul>
+    </div>
+    <div id="main">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <a href="index.html" class="home-link">GHOST NOTE</a>
+        <a href="cart.html" class="cart-link"><img src="shopping-cart.png" alt="Cart"></a>
+        <div id="Fender">
+            <div class="image-container">
+                <img src="midnight.jpg" alt="Midnight">
+            </div>
+            <div class="info-container">
+                <h1>Tower Strings Midnight violin outfit
+                </h1>
+                <h3>$296.00</h3>
+                <button class="add-to-cart" id="fdbut">Add to Cart</button>
+                <hr>
+                <h2>REAL DEAL SOUND</h2>
+                 <p>The Midnight violin is a great starter violin that anyone can afford! We opted to have an all-black version that is less expensive because the varnish time is considerably faster.
+                     It certainly helps that it's a darn cool-looking violin as well! We have never been happy with what the market had to offer in this price range. The set up, accessories, and quality of build is far above anything we have tested in this price range!</p>
+                <hr>
+                <h2>FEATURES</h2>
+                <ul>
+                    <li>4/4 (full) size</li>
+                    <li>Solid-carved spruce and maple tonewoods</li>
+                    <li>Durable black metallic finish. The varnish glimmers like a midnight sky</li>
+                    <li>100% ebony fingerboard & fittings</li>
+                    <li>Strings - Prelude or other quality steel core string set</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div id="categoryList"> </div>
+    </div>
+    
+    <div id="footer">
+        <div id="emailform">
+            <h1>Creativity Unlocked</h1>
+            <p>Fuel your creative potential</p>
+            <p>become a part of our community and</p>
+            <p>enjoy savings on your first purchase</p>
+            <br>
+            <br>
+            <form action="/subscribe" method="post">
+                <div class="email-form-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">➔</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class="footer-content">
+            <p>© 2024 Ghost Note. All rights reserved.</p>
+            <img src="visa.jpg" alt="Your Image Description" class="footer-image" />
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+    <script src="categories.js"></script>
+    <script src="cart.js"></script>
+<style>
+#main{
+    height: 100%;
+}
+#Fender {
+    font-family: 'Courier New', Courier, monospace;
+    padding: 40px;
+    overflow: hidden; 
+    display: flex; 
+    align-items: center; 
+}
+
+.image-container {
+    flex: 1; 
+    text-align: center; 
+    padding-right: 20px; 
+}
+
+.image-container img {
+    max-width: 100%; 
+    height: auto; 
+}
+
+.info-container {
+    flex: 1;
+}
+
+.info-container h3{
+    color: #ffca45;
+}
+
+#fdbut {
+    background-color: #2d7adf;
+    height: 15%;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    font-size: 24px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+</style>
+</body>
+</html>
+

@@ -1,0 +1,53 @@
+.sidebar {
+    width: 0; 
+    position: fixed; 
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: white; 
+    overflow-x: hidden; 
+    transition: 0.3s; 
+    border-radius: 10px; 
+    z-index: 1000; 
+    font-family: 'GHOST';
+    color: #333;
+}
+
+
+.sidebar.active {
+    width: 300px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    box-shadow: 4px 0 8px rgba(0,0,0,0.5);
+}
+
+@media (min-width: 1024px) {
+    .sidebar.active {
+        width: 500px;
+    }
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px; 
+}
+
+.sidebar-home-link {
+    text-decoration: none;  
+    color:#333;  
+    font-size: 24px; 
+    margin-top: 7px;
+}
+
+.close-button {
+    border: none;
+    background: none; 
+    font-size: 24px;
+    cursor: pointer; 
+    font-family: 'GHOST';
+    margin-top: 7px;
+}
+

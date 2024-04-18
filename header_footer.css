@@ -1,0 +1,53 @@
+#header {
+    background-color: #222121;
+    text-align: center;
+    padding: 20px;
+    color: whitesmoke;
+    height: 2%;
+}
+
+#footer {
+    text-align: left;
+    background-color: #222121;
+    padding: 20px;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#footer img{
+    height: 40px;
+    width: 100px;
+}
+#emailform h1, #emailform p {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.email-form-group {
+    display: flex;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+}
+
+#emailform input[type="email"] {
+    flex-grow: 1;
+    border: none;
+    padding: 10px;
+    margin-right: -1px;
+}
+
+#emailform button {
+    padding: 10px 20px;
+    background-color: #1A73E8; 
+    color: white;
+    border: none; 
+    cursor: pointer;
+    
+
+}
+
+#emailform button:hover {
+    background-color: #165AB6; 
+}
+

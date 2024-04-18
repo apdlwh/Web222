@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Note - Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="contactUs.css">
+    <link rel="stylesheet" href="categories.css">
+
+</head>
+<body>
+    <div id="header">
+        <p>The Annual Spring Sale is here! Free US shipping over $98+</p>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-home-link">GHOST NOTE</a>
+            <button class="close-button" onclick="closeSidebar()" style="color: #333;">X</button>
+        </div>
+        <ul id="categoryContainer"> </ul>
+    </div>
+    <div id="main">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <a href="index.html" class="home-link">GHOST NOTE</a>
+        <a href="cart.html" class="cart-link"><img src="shopping-cart.png" alt="Cart"></a>
+        <div id="contact-form">
+            <div>
+                <h1>Get In Touch With Us!</h1>
+                <form action="/submit" method="post" onsubmit="return validateForm()">
+                    <input type="text" id="name" name="name" placeholder="Name" required>
+                    <input type="email" id="email" name="email" placeholder="Email" required>
+                    <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                    <textarea id="question" name="question" placeholder="Your question..." required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+            <img src="IMG_2922.jpeg" alt="Contact Image" >
+        </div>
+        
+        
+    </div>
+    
+    <div id="footer">
+        <div id="emailform">
+            <h1>Creativity Unlocked</h1>
+            <p>Fuel your creative potential</p>
+            <p> becoming a part of our community and </p>
+            <p>enjoy savings on your first purchase</p>
+            <br>
+            <br>
+            <form action="/subscribe" method="post">
+                <div class="email-form-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">➔</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class="footer-content">
+            <p>© 2024 Ghost Note. All rights reserved.</p>
+            <img src="visa.jpg" alt="Your Image Description" class="footer-image" />
+        </div>
+    </body>
+    </div>
+    <script src="script.js"></script>
+    <script src="categories.js"></script>
+    <script src="products.js"></script>
+    <script src="cart.js"></script>
+    <script>
+        function validateForm() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var subject = document.getElementById('subject').value;
+            var question = document.getElementById('question').value;
+        
+            if (name == "" || email == "" || subject == "" || question == "") {
+                alert("All fields must be filled out");
+                return false;
+            }
+            return true;
+        }
+        </script>
+
+</body>
+</html>

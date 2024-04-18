@@ -1,0 +1,40 @@
+.hamburger, .home-link, .cart-link {
+    position: absolute;
+    top: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    font-family: 'GHOST';
+}
+
+.hamburger {
+    left: 10px;
+    z-index: 1000;
+}
+
+.cart-link {
+    position: absolute; 
+    right: 10px; 
+    top: 10px;
+    z-index: 1000;/
+}
+
+.cart-link img {
+    width: 38x;
+    height: 38px;
+}
+
+.home-link {
+    left: 50px;
+    font-size: 39px;
+    color: #333;
+    text-decoration: none;
+    z-index: 500;
+}
+
+@media (max-width: 768px) {
+    .cart-link {
+        right: 50%;
+        transform: translateX(50%);
+    }
+}

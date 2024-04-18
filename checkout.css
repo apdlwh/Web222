@@ -1,0 +1,62 @@
+#main {
+    height: 90%;
+    position: relative;
+}
+
+#summary {
+    width: 90%;
+    background-color: rgb(55, 69, 107);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Courier New', Courier, monospace;
+    height: 60%;
+    color: rgb(252, 185, 122);
+}
+
+#payment-form label {
+    color: rgb(252, 185, 122);
+    margin-bottom: 5px;
+    display: block;
+}
+
+#payment-form input[type="text"],
+#payment-form input[type="submit"] {
+    width: calc(100% - 22px); 
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: #f9f9f9;
+    color: #333;
+    vertical-align: middle; 
+    box-sizing: border-box; 
+}
+
+.error-message {
+    color: red;
+}
+
+#payment-form button[type="submit"] {
+    display: inline-block; 
+    width: calc(100% - 22px); 
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: rgb(252, 185, 122);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    vertical-align: middle; 
+    box-sizing: border-box; 
+}
+
+#payment-form button[type="submit"]:hover {
+    background-color: #2d7adf;
+}

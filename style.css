@@ -1,0 +1,117 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+}
+#main{
+    background-color: #fff;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+#main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    padding: 20px;  
+    box-sizing: border-box;
+    min-width: 320px; 
+    max-width: 1200px;
+    margin: auto; 
+    height: 200%;
+}
+
+body:not(.sidebar-open) #main {
+    position: relative;
+    width: 100%;
+    overflow: auto;
+}
+
+#BX {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-top: 80px;
+}
+
+#BX ul {
+    display: flex;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    align-items: center;
+}
+
+#BX li {
+    flex: 0 0 auto;
+    margin-right: 30px;
+    width: 300px;
+    height: 500px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+#BX img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 10px;
+}
+
+#BX p {
+    z-index: 2;
+    color: white;
+    width: 100%;
+    padding: 10px; 
+    margin: 0; 
+    text-align: left;
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+    font-size: 40px;
+    font-weight: bold;
+    display: inline; 
+}
+#BX li:last-child {
+    margin-right: 0; 
+}
+
+#BX ul::-webkit-scrollbar {
+    height: 10px;
+    
+}
+
+#BX ul::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+#BX ul::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+#BX ul::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+
+
+
+
+
+
+
+
+
+

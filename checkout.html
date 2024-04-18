@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Note - checkout</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="product_promo.css">
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="checkout.css">
+</head>
+<body>
+    <div id="header">
+        <p>The Annual Spring Sale is here! Free US shipping over $98+</p>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-home-link">GHOST NOTE</a>
+            <button class="close-button" onclick="closeSidebar()">X</button>
+        </div>
+        <ul id="categoryContainer"> </ul>
+    </div>
+
+    
+    <div id="main">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <a href="index.html" class="home-link">GHOST NOTE</a>
+        <a href="cart.html" class="cart-link"><img src="shopping-cart.png" alt="Cart"></a>
+         
+        <div id="summary">
+            <h1>Checkout</h1>
+            <form id="payment-form">
+                <label for="card-number">Card Number:</label>
+                <input type="text" id="card-number" name="card-number" required pattern="\d{16}" maxlength="16" placeholder="Enter your card number XXXX-XXXX-XXXX-XXXX">
+                <span class="error-message" id="card-number-error"></span>
+
+                <label for="expiry-date">Expiry Date:</label>
+                <input type="text" id="expiry-date" name="expiry-date" required pattern="(0[1-9]|1[0-2])\/\d{2}" placeholder="MM/YY">
+                <span class="error-message" id="expiry-date-error"></span>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required pattern="\d{3}" maxlength="3" placeholder="Enter CVV">
+                <span class="error-message" id="cvv-error"></span>
+
+                <button type="submit">Pay Now</button>
+            </form>
+        </div>
+
+        
+        
+        <div id="categoryList"> </div>
+    </div>
+    <div id="footer">
+        <div id="emailform">
+            <h1>Creativity Unlocked</h1>
+            <p>Fuel your creative potential</p>
+            <p> becoming a part of our community and </p>
+            <p>enjoy savings on your first purchase</p>
+            <br>
+            <br>
+            <form action="/subscribe" method="post">
+                <div class="email-form-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">➔</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class="footer-content">
+            <p>© 2024 Ghost Note. All rights reserved.</p>
+            <img src="visa.jpg" alt="Your Image Description" class="footer-image" />
+        </div>
+    </div>
+    <script src="cart.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('payment-form');
+
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        validateForm();
+    });
+
+    function validateForm() {
+        const cardNumberInput = document.getElementById('card-number');
+        const expiryDateInput = document.getElementById('expiry-date');
+        const cvvInput = document.getElementById('cvv');
+
+        const cardNumberError = document.getElementById('card-number-error');
+        const expiryDateError = document.getElementById('expiry-date-error');
+        const cvvError = document.getElementById('cvv-error');
+
+        const cardNumberPattern = /^\d{16}$/;
+        const expiryDatePattern = /^(0[1-9]|1[0-2])\/\d{2}$/;
+        const cvvPattern = /^\d{3}$/;
+
+        cardNumberError.textContent = '';
+        expiryDateError.textContent = '';
+        cvvError.textContent = '';
+
+        if (!cardNumberPattern.test(cardNumberInput.value)) {
+            cardNumberError.textContent = 'Invalid card number';
+            return false;
+        }
+
+        if (!expiryDatePattern.test(expiryDateInput.value)) {
+            expiryDateError.textContent = 'Invalid expiry date (MM/YY)';
+            return false;
+        }
+
+        if (!cvvPattern.test(cvvInput.value)) {
+            cvvError.textContent = 'Invalid CVV';
+            return false;
+        }
+
+        form.submit();
+    }
+});
+
+    </script>
+</body>
+</html>

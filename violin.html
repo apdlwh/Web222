@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghost Note - Violin</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header_footer.css">
+    <link rel="stylesheet" href="nav.css">
+    <link rel="stylesheet" href="font.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="product_promo.css">
+    <link rel="stylesheet" href="categories.css">
+    <link rel="stylesheet" href="newpage.css">
+</head>
+<body>
+    <div id="header">
+        <p>The Annual Spring Sale is here! Free US shipping over $98+</p>
+    </div>
+    <div id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+            <a href="index.html" class="sidebar-home-link">GHOST NOTE</a>
+            <button class="close-button" onclick="closeSidebar()">X</button>
+        </div>
+        <ul id="categoryContainer"> </ul>
+    </div>
+    <div id="main">
+        <button class="hamburger" onclick="toggleMenu()">☰</button>
+        <a href="index.html" class="home-link">GHOST NOTE</a>
+        <a href="cart.html" class="cart-link"><img src="shopping-cart.png" alt="Cart"></a>
+        <div id="promo-box" class="promo-box">
+            <h2 id="category-header">VIOLIN</h2>
+            <img src="violin.GIF" alt="Promotional Image" style="width: 100%; height: auto;">
+        </div>
+
+        <div class="card-container">
+            <div class="card" onclick="goToProduct('midnight.html')">
+                <img src="midnight.jpg" alt="Midnight">
+                <h3>Midnight</h3>
+                <h2>$296.00</h2>
+                <p>Tower String Starter Violin</p>
+                <button class="add-to-cart" onclick="addToCart({ id: 'V3', name: 'Midnight', price: 29600 })">Add to Cart</button>
+            </div>
+            <div class="card" onclick="addToCart({ id: 'V4', name: 'Entertainer', price: 28900 })">
+                <img src="entertainer.jpg" alt="Entertainer">
+                <h3>Entertainer</h3>
+                <h2>$289.00</h2>
+                <p>Pink Scotties Violin</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card" onclick="addToCart({ id: 'V7', name: 'OB1', price: 149000 })">
+                <img src="OB1.jpg" alt="OB1">
+                <h3>OB1</h3>
+                <h2>$1490.00</h2>
+                <p>Fiddlerman Violin Outfit</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card" onclick="addToCart({ id: 'V98', name: '905', price: 39000 })">
+                <img src="9051.jpg" alt="905">
+                <h3>905</h3>
+                <h2>$399.00</h2>
+                <p>Ming Jiang Zhu Violin</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="card" onclick="addToCart({ id: 'V56', name: 'Holstein', price: 390000 })">
+                <img src="holstein.jpg" alt="Holstein">
+                <h3>Holstein</h3>
+                <h2>$3900.00</h2>
+                <p>Bench Strad 1715 Violin</p>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+        
+        
+        <div id="categoryList"> </div>
+    </div>
+    
+    <div id="footer">
+        <div id="emailform">
+            <h1>Creativity Unlocked</h1>
+            <p>Fuel your creative potential</p>
+            <p>become a part of our community and</p>
+            <p>enjoy savings on your first purchase</p>
+            <br>
+            <br>
+            <form action="/subscribe" method="post">
+                <div class="email-form-group">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <button type="submit">➔</button>
+                </div>
+            </form>
+        </div>
+        <br>
+        <br>
+        <div class="footer-content">
+            <p>© 2024 Ghost Note. All rights reserved.</p>
+            <img src="visa.jpg" alt="Your Image Description" class="footer-image" />
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="products.js"></script>
+    <script src="categories.js"></script>
+    <script src="cart.js"></script>
+    <script>
+    function goToProduct(productPage) {
+            window.location.href = productPage;
+        }
+    </script>
+    
+</body>
+</html>
